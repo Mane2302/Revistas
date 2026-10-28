@@ -1,0 +1,3 @@
+-- Intencionalmente vacío: la aplicación no incluye usuarios ni datos de demostración.
+-- Las plantillas se cargan en la migración 20261027000100_plantillas.sql.
+-- Crea la primera cuenta de profesor con: npm run crear-profesor

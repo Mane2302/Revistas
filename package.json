@@ -1,0 +1,53 @@
+{
+  "name": "revista-escolar-digital",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Revista Escolar Digital — Imagina, escribe, diseña y publica",
+  "engines": {
+    "node": ">=20.9.0"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint .",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "plantillas:sql": "tsx scripts/generar-plantillas-sql.ts",
+    "crear-profesor": "node scripts/crear-profesor.mjs",
+    "verificar": "npm run lint && npm run typecheck && npm run test && npm run build"
+  },
+  "dependencies": {
+    "@dnd-kit/core": "6.3.1",
+    "@dnd-kit/sortable": "10.0.0",
+    "@dnd-kit/utilities": "3.2.2",
+    "@pdf-lib/fontkit": "1.1.1",
+    "@supabase/ssr": "0.12.7",
+    "@supabase/supabase-js": "2.117.3",
+    "lucide-react": "1.54.0",
+    "next": "16.3.8",
+    "pdf-lib": "1.17.1",
+    "react": "19.2.8",
+    "react-dom": "19.2.8",
+    "server-only": "0.0.1",
+    "zod": "4.6.5"
+  },
+  "devDependencies": {
+    "@electric-sql/pglite": "0.5.8",
+    "@napi-rs/canvas": "1.0.9",
+    "@tailwindcss/postcss": "4.3.2",
+    "@types/node": "24.19.2",
+    "@types/react": "19.2.18",
+    "@types/react-dom": "19.2.7",
+    "eslint": "9.39.5",
+    "eslint-config-next": "16.3.8",
+    "pdfjs-dist": "6.3.289",
+    "playwright-core": "1.64.0",
+    "tailwindcss": "4.3.2",
+    "tsx": "4.20.6",
+    "typescript": "5.9.3",
+    "vitest": "4.1.12"
+  }
+}

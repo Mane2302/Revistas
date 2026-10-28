@@ -1,0 +1,92 @@
+@import "tailwindcss";
+
+/* Identidad visual: papel cálido, tinta azul noche y acentos alegres (coral, sol, cielo, menta). */
+@theme {
+  --font-sans: "rev-nunito", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "rev-montserrat", "rev-nunito", ui-sans-serif, sans-serif;
+  --font-serif: "rev-playfair-display", Georgia, serif;
+
+  --color-tinta: #1d1b33;
+  --color-tinta-suave: #55536f;
+  --color-papel: #fbf8f3;
+  --color-linea: #e8e2d8;
+
+  --color-coral: #ff5a5f;
+  --color-coral-oscuro: #c9363b;
+  --color-coral-claro: #ffe4e2;
+  --color-sol: #ffc145;
+  --color-sol-claro: #fff3d6;
+  --color-cielo: #3d5afe;
+  --color-cielo-oscuro: #2b44d6;
+  --color-cielo-claro: #e3e8ff;
+  --color-menta: #0f9f6e;
+  --color-menta-claro: #dcf7ec;
+  --color-uva: #7c3aed;
+  --color-uva-claro: #efe7ff;
+
+  --shadow-tarjeta: 0 1px 2px rgb(29 27 51 / 0.05), 0 6px 20px rgb(29 27 51 / 0.06);
+  --shadow-flotante: 0 10px 40px rgb(29 27 51 / 0.18);
+
+  --animate-aparecer: aparecer 0.25s ease-out;
+}
+
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background: var(--color-papel);
+  color: var(--color-tinta);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-cielo);
+  outline-offset: 2px;
+}
+
+::selection {
+  background: var(--color-sol);
+  color: var(--color-tinta);
+}
+
+dialog::backdrop {
+  background: rgb(29 27 51 / 0.45);
+  backdrop-filter: blur(2px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Texto de las páginas de la revista: mismo comportamiento que el ajuste de líneas del PDF. */
+.page-text {
+  white-space: pre-wrap;
+  overflow-wrap: break-word;
+  word-break: normal;
+  font-kerning: normal;
+  font-variant-ligatures: none;
+}
+
+/* Patrón de los marcos de imagen vacíos. */
+.image-placeholder {
+  background-color: #eef0f6;
+  background-image: repeating-linear-gradient(45deg, rgb(61 90 254 / 0.07) 0 6px, transparent 6px 12px);
+}

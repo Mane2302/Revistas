@@ -1,0 +1,31 @@
+# dependencias
+/node_modules
+
+# Next.js
+/.next/
+/out/
+next-env.d.ts
+*.tsbuildinfo
+
+# producción
+/build
+/coverage
+
+# variables de entorno: NUNCA subir claves
+.env
+.env.local
+.env.*.local
+.env.development
+.env.production
+
+# Supabase local
+supabase/.temp/
+supabase/.branches/
+
+# varios
+.DS_Store
+*.pem
+npm-debug.log*
+.vercel
+/test-results/
+/tmp-output/
